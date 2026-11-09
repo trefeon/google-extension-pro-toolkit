@@ -1,0 +1,18 @@
+# OS & editor artifacts
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*~
+.idea/
+.vscode/
+
+# Build artifacts & package archives
+*.zip
+dist/
+build/
+
+# Environment files
+.env
+.env.*
+!.env.example
