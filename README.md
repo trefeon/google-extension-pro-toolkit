@@ -7,10 +7,12 @@ A clean, lightweight Manifest V3 Chrome extension toolkit that injects promotion
 ## Key Features
 
 - **Promotional Offer Token Injection:** Injects verified promotional campaign offer tokens (`g1.2tb.ai.subs_variant`) into Google Play acquisition RPC requests (`/eacquire/multiline` & `Ngbm` RPC payload) to activate promotional subscription terms.
-- **Multi-Tier Offer Profiles:**
-  - **Tier 1:** 12 Months (1 Year) Promotional Trial ($0.00 initial period)
-  - **Tier 2:** 6 Months Promotional Offer (Stack variant)
-  - **Tier 3:** 6 Months Promotional Offer (Standard variant)
+- **Multi-Tier Offer Profiles & 2-Year Fast Mode:**
+  - **⚡ 2-Year Fast Stacking (2x 12 Months):** The 12-Month offer token can be stacked **twice** sequentially on the same account to immediately achieve **24 Months (2 Full Years)** of Google AI Pro at **$0.00** total.
+  - **Tier 1:** 12 Months (Year 1) Promotional Trial ($0.00 initial activation)
+  - **Tier 1 Stack:** 12 Months (Year 2 Stack) Promotional Extension ($0.00 -> 24 Months / 2 Years)
+  - **Tier 2:** 6 Months Promotional Offer (Samsung variant stack)
+  - **Tier 3:** 6 Months Promotional Offer (Pixel variant stack)
   - **Tier 4 / Backup:** 6 Months Fallback variant
 - **Real-Time Checkout Price Guard:** Live DOM inspector embedded in the `tokenized.play.google.com` checkout modal:
   - 🟢 **Green Banner:** Confirms verified free trial terms ($0.00 charged today).
@@ -50,17 +52,19 @@ A clean, lightweight Manifest V3 Chrome extension toolkit that injects promotion
 
 1. **Connect to US Egress:** Verify your browser IP egress resolves to the United States before loading Google One.
 2. **Navigate to Plans:** Open `https://one.google.com/plans`. Ensure the billing toggle at the top is set to **Monthly**.
-3. **Select Promotional Tier:**
-   - Click the extension icon in your toolbar.
-   - Select **Tier 1 · 12 Months (1 Year)**.
-   - Refresh the page. Confirm the bottom-right badge displays: `Injection active · 12 Months (1 Year)`.
-4. **Trigger Checkout Flow:** Click **Get discount** on the **Google AI Pro (2 TB)** card (the rightmost plan card).
-5. **Inspect the Checkout Price Guard:**
-   - When the Play checkout modal opens, check the top sticky banner.
-   - Confirm it shows green: `✅ Free trial detected — Safe to subscribe (please verify total is $0.00)`.
-6. **Confirm Subscription:** Select your payment card with US billing address and confirm today's total is **$0.00** before clicking **Subscribe**.
-7. **Manage Renewal:** To prevent unwanted recurring billing after your promotional period ends, manage your subscription at [Google Play Subscriptions](https://play.google.com/store/account/subscriptions) and cancel auto-renewal.
-
+3. **Activate Year 1 (12 Months):**
+   - Click the extension icon in your toolbar and select **Tier 1 · 12 Months (Year 1)**.
+   - Refresh the page. Confirm the bottom-right badge displays: `Injection active · 12 Months (Year 1)`.
+   - Click **Get discount** on the **Google AI Pro (2 TB)** card.
+   - Confirm the checkout price guard banner shows green (`$0.00`), then click **Subscribe**.
+4. **⚡ Activate Year 2 (Fast 2-Year Stack):**
+   - Return to `https://one.google.com/plans`.
+   - Open the extension popup and switch to **Tier 1 Stack · 12 Months (Year 2)**.
+   - Refresh the page. Confirm the badge displays: `Injection active · 12 Months (Year 2 Stack · 2-Yr Fast) · Renewal stack`.
+   - Click **Get discount / Switch plan** on the Google AI Pro card.
+   - Confirm the checkout modal shows **$0.00 due today** with the renewal date extended by another full year (into late 2028).
+   - Click **Subscribe** to lock in **24 Months (2 Full Years)**.
+5. **Cancel Auto-Renewal:** Visit [play.google.com/store/account/subscriptions](https://play.google.com/store/account/subscriptions) and click **Cancel subscription** to prevent future billing while keeping all 2-year benefits active.
 ---
 
 ## Extension Architecture

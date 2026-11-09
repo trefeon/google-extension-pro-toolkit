@@ -9,6 +9,7 @@
 
   const TOKENS = {
     "12m": "AVbCH/cspB8VdqKJ+ax/uPxUFAVuYRPX4iSjtg4Fu0PG9zUeURSM7y//LlQva1dCd/rbKVM6EJmyiG/C9BoQ95pMl8yDCHuiwCvM5CuGJME=",
+    "12m_stack": "AVbCH/cspB8VdqKJ+ax/uPxUFAVuYRPX4iSjtg4Fu0PG9zUeURSM7y//LlQva1dCd/rbKVM6EJmyiG/C9BoQ95pMl8yDCHuiwCvM5CuGJME=",
     "6m_ss": "AVbCH/cgl4zvPT2Lqw95Gn+RYAJIVwFwi783i6uVprX7u3MCa5J4CcTXH5RABa5WjBrUoQnwf8vI10TNV7ktd26myIdxqIwGmNoJ5ofYNqpQ10RKoSvHs75wsfA=",
     "6m": "AVbCH/fUON3w8hpfeutprA3BMQwrBwYIB6Y8CSWi1isDCDswKUUhGQ3dluj5WXsNKOvr8K5UULBGrRsf4KlW1rHLz0fF3SvxQhBFRbBOHCA=",
     "6m_2": "AVbCH/cJ5SeHgkVRt+bdcrapx/aLSu2kbsBgMdI413zbllDNsNQoC/zVlG/Npbu55WlMzBwWPhUedIvZFDg7fw0CmCv/8DKj04IZ21pK7mrV/hh5"
@@ -51,7 +52,13 @@
     if (!currentTest) {
       showBadge("Injector: Disabled", "#f5f5f5");
     } else {
-      const label = { "12m": "12 Months (1 Year)", "6m_ss": "6 Months (SS)", "6m": "6 Months", "6m_2": "6 Months (Alt)" }[currentTest.layer] || currentTest.layer;
+      const label = {
+        "12m": "12 Months (Year 1)",
+        "12m_stack": "12 Months (Year 2 Stack · 2-Yr Fast)",
+        "6m_ss": "6 Months (SS)",
+        "6m": "6 Months",
+        "6m_2": "6 Months (Alt)"
+      }[currentTest.layer] || currentTest.layer;
       showBadge("Injection active · " + label + (subId ? " · Renewal stack" : ""), "#eaf7ea");
     }
   }

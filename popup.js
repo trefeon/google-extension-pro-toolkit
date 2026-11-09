@@ -1,5 +1,12 @@
 /* popup.js */
-const LABELS = { off: "Disabled", "12m": "12 Months (1 Year)", "6m_ss": "6 Months (SS)", "6m": "6 Months", "6m_2": "6 Months (Alt)" };
+const LABELS = {
+  off: "Disabled",
+  "12m": "12 Months (Year 1)",
+  "12m_stack": "12 Months (Year 2 Stack · 2-Yr Fast)",
+  "6m_ss": "6 Months (SS)",
+  "6m": "6 Months",
+  "6m_2": "6 Months (Alt)"
+};
 const stateEl = document.getElementById("state");
 
 function paintState(st) {

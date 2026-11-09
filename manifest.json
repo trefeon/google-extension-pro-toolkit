@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Google Extension Pro Toolkit",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Chrome extension toolkit for promotional offer token injection and checkout price safety verification on Google One AI Pro.",
   "permissions": ["storage"],
   "host_permissions": [
